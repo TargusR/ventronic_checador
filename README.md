@@ -4,7 +4,7 @@
 
 ## Serverside Script Example
 
-In _resources/serverscript_test_ you'll find an example _serverdemo.php_ that can be mounted to make poll product data.
+In _resources/serverscript_test_ you'll find an example _serverdemo.php_ that can be mounted to query product data.
 It contains only four products registered in arrays, and recieves one GET parameter wich refers to barcode. It will alwas return a JSON object with a product (of the four available) refered to any barcode number given.
 
 
