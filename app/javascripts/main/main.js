@@ -6,6 +6,7 @@ requirejs.config({
     backbone:   '../../node_modules/backbone/backbone',
     underscore: '../../node_modules/underscore/underscore-min',
     underi18n:  '../../node_modules/underi18n/underi18n',
+    text:       '../../node_modules/requirejs-text/text'
   }
 });
 

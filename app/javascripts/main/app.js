@@ -1,16 +1,18 @@
 define([
   'router',
-  'model_product',
   'view_mainview',
-  'view_scannerbar',
-  'view_product'
+  'model_product',
   ],
-  function(Router, ProductModel, MainView, ScannerBar, ProductView) {
+  function(Router, MainView, ProductModel) {
 
   var App = {
     initialize: function() {
       Router.initialize();
       console.log("hola Mundo");
+    },
+
+    start: function() {
+      App.mainView = new MainView;
     },
 
     register: function(globalName) {
