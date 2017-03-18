@@ -1,0 +1,19 @@
+{
+  "name": "Checador",
+  "version": "0.1.0",
+  "description": "Checador application built with Electron",
+  "author": {
+    "name": "Josue Martin",
+    "email": ""
+  },
+  "license": "MIT",
+  "main": "javascripts/main/index.js",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "dragscroll": "0.0.8",
+    "fontawesome": "^4.7.2",
+    "materialize-css": "^0.98.0",
+    "requirejs": "^2.3.3",
+    "underi18n": "^1.1.0"
+  }
+}
