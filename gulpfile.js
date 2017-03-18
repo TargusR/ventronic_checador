@@ -11,8 +11,30 @@ require('bozon/lib/tasks');
 // So now you can use `bozon.task`,  `bozon.src` and `bozon.dest` to define
 // your tasks. Bozon will handle proper app and build paths for you.
 //
-// ===========================================================================================
 
+bozon = require('bozon/lib/bozon');
+
+// Custom Parsers
+bozon.hooks.push(
+  'templates',
+  'scripts:views',
+  'scripts:models'
+  );
+
+// template html parsing 
+bozon.task('templates', function () {
+  return bozon.src('templates/*.html').pipe(bozon.dest('templates/'))
+});
+
+bozon.task('scripts:views', function () {
+  return bozon.src('javascripts/views/**/*.js').pipe(bozon.dest('javascripts/main/'))
+})
+
+bozon.task('scripts:models', function () {
+  return bozon.src('javascripts/models/**/*.js').pipe(bozon.dest('javascripts/main/'))
+})
+
+// ===========================================================================================
 // If you want to use CoffeeScript or any other compiled to Javascript language
 // in your project, you can add corresponding gulp plugin to package.json
 // include it and define task that will compile your code:

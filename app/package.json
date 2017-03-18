@@ -14,6 +14,7 @@
     "fontawesome": "^4.7.2",
     "materialize-css": "^0.98.0",
     "requirejs": "^2.3.3",
+    "requirejs-text": "^2.0.15",
     "underi18n": "^1.1.0"
   }
 }
