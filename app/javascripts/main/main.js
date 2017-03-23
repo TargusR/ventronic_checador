@@ -22,4 +22,5 @@ function(Config, App, Templated) {
 
   App.register();
   App.initialize();
+  //App.start();
 });
