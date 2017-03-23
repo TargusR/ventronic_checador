@@ -1,0 +1,112 @@
+/*
+  
+  .:: Animation Mixins and keyframes ::.
+  
+  Crossbrowser animation statements and mixins to quickly
+  set them up on your classes
+
+*/
+
+// Standart animation callback
+@mixin animate ($keyframe, $duration) {
+  -webkit-animation-name: $keyframe; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: $duration; /* Chrome, Safari, Opera */
+  animation-name: $keyframe;
+  animation-duration: $duration;
+}
+@mixin animate-cicle ($count, $direction) {
+  -webkit-animation-iteration-count: $count;
+  -webkit-animation-direction: $direction;
+  animation-iteration-count: $count;
+  animation-direction: $direction;
+}
+
+// BLINK (Linear)
+@keyframes blink {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+@-webkit-keyframes blink {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+// BLINK POP (Blink with a pop up efect)
+@keyframes blinkPop {
+  0% {transform: scale(0);}
+  80% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+@-webkit-keyframes blinkPop {
+  0% {transform: scale(0);}
+  80% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+// JUMP POP (Jump with a slight pop up efect)
+@keyframes jumpPop {
+  0% {margin-bottom: 0%;}
+  60% {transform: scale(1.1); margin-bottom: 1%;}
+  100% {transform: scale(1); margin-bottom: 0%;}
+}
+@-webkit-keyframes jumpPop {
+  0% {margin-bottom: 0%;}
+  60% {transform: scale(1.1); margin-bottom: 1%;}
+  100% {transform: scale(1); margin-bottom: 0%;}
+}
+
+// FADE IN (Fade in... ovbiously)
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+// FADE OUT (Fade out... ovbiously)
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+// FADE INOUT (Fade in and out)
+@keyframes fadeInOut {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes fadeInOut {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+// SLIDE RIGHT (Slide 15px to right and remain 40% of given time there)
+@keyframes slideRight {
+  0% {margin-right: 0px;}
+  60% {margin-right: -15px;}
+  100% {margin-right: -15px;}
+}
+@-webkit-keyframes slideRight {
+  0% {margin-right: 0px;}
+  60% {margin-right: -15px;}
+  100% {margin-right: -15px;}
+}
+
+// SLIDE LEFT (Slide 15px to left and remain 40% of given time there)
+@keyframes slideLeft {
+  0% {margin-left: 0px;}
+  60% {margin-left: -15px;}
+  100% {margin-left: -15px;}
+}
+@-webkit-keyframes slideLeft {
+  0% {margin-left: 0px;}
+  60% {margin-left: -15px;}
+  100% {margin-left: -15px;}
+}

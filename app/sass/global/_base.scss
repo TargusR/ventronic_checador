@@ -1,0 +1,43 @@
+// HTML basic classes
+@font-face {
+  font-family: "DK New Beginnings";
+  src: url(fonts/DK_New_Beginnings.otf) format("opentype");
+}
+
+$NewBeginnings: "DK New Beginnings", sans-serif;
+
+body {
+  background-color: $green;
+  color: $almost-white;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+  a {
+    color: $pale-red;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $red;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: $NewBeginnings;
+  }
+
+  .fa {
+    color: $almost-white;
+  }
+
+  img {
+    @include no-selection();
+    @include no-drag();
+  }
+}
+
+@media only screen and (max-width: $xs) {
+  body {
+    .fa {
+      font-size: 2em;
+    }
+  }
+}
