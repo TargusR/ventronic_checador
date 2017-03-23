@@ -89,6 +89,16 @@ bozon.task('scripts:models', function () {
 //   }).on('error', sass.logError)).pipe(bozon.dest('stylesheets'));
 // });
 //
+
+sass = require('gulp-sass');
+
+bozon.buildTaskBefore('styles', 'styles:sass', function() {
+  return bozon.src('sass/**/*.sass').pipe(sass.sync({
+    outputStyle: 'expanded',
+    precision: 10
+  }).on('error', sass.logError)).pipe(bozon.dest('stylesheets'));
+});
+
 //============================================================================================
 
 //== Task names that are already used by bozon ===============================================

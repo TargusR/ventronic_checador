@@ -16,10 +16,12 @@
   },
   "build": {
     "appId": "com.electron.checador",
-    "win": {
-    },
+    "win": {},
     "mac": {
       "category": "your.app.category.type"
     }
+  },
+  "dependencies": {
+    "gulp-sass": "^3.1.0"
   }
 }
