@@ -1,19 +1,19 @@
 define([
   'backbone',
-  'jquery',
   'dragscroll',
   'view_scannerbar',
   'view_product',
   'text!templates/main.html'
 ], 
 
-function(Backbone, $, Dragscroll, ScannerBarView, ProducView, main_t) {
+function(Backbone, Dragscroll, ScannerBarView, ProducView, main_t) {
   var MainView = Backbone.View.extend({
     el: $('#app_container'),
     tagName: 'div',
     className: 'main-view',
 
     initialize: function() {
+      this.scannerBarView = new ScannerBarView;
       /*
       this.navigationView = new NavigationView;
       this.headerView = new HeaderView;
@@ -30,8 +30,11 @@ function(Backbone, $, Dragscroll, ScannerBarView, ProducView, main_t) {
     },
 
     render: function() {
-      var mainview = this
+      var mainview = this;
       mainview.$el.append(main_t);
+
+      var scannerBarContainer = mainview.$el.find('#scannerbar');
+      scannerBarContainer.append(mainview.scannerBarView.$el);
 
       //mainview.$el.find('.main').addClass(C.sponsorCode);
 
@@ -84,5 +87,5 @@ function(Backbone, $, Dragscroll, ScannerBarView, ProducView, main_t) {
     }*/
   })
 
-  return MainView
-})
+  return MainView;
+});
