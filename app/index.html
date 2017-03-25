@@ -24,11 +24,25 @@
   <link rel="stylesheet" href="stylesheets/application.css" />
 </head>
 <body>
-  <div id="app_container"></div>
-  <div class="message">
-    <h1 id="title"></h1>
-    <div id="details"></div>
-    <small id="versions"></small>
+  <div class="index-bar">
+    <div class="button button-info">
+      <i class="fa fa-info-circle"></i>  
+    </div>
   </div>
+  <div id="app_container"></div>
+  
+  <div class="about about-hide modal-veil">
+    <div class="modal-window about-content message card-panel light-blue-text">
+      <div class="window-controls">
+        <div class="button button-close">
+          <i class="fa fa-times fa-2x"></i>  
+        </div>
+      </div>
+      <h1 id="title"></h1>
+      <div id="details"></div>
+      <small id="versions"></small>
+    </div>
+  </div>
+
 </body>
 </html>
