@@ -1,15 +1,23 @@
-// HTML basic classes
+/*
 @font-face {
   font-family: "DK New Beginnings";
   src: url(fonts/DK_New_Beginnings.otf) format("opentype");
 }
 
 $NewBeginnings: "DK New Beginnings", sans-serif;
+*/
 
 body {
-  background-color: $green;
-  color: $almost-white;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  background-image: url("../images/background_netdroid.png");
+  background-color: $gray;
+  color: $white;
+  @include no-selection();
+  @include no-drag();
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  /*
 
   a {
     color: $pale-red;
@@ -32,12 +40,5 @@ body {
     @include no-selection();
     @include no-drag();
   }
-}
-
-@media only screen and (max-width: $xs) {
-  body {
-    .fa {
-      font-size: 2em;
-    }
-  }
+  */
 }
