@@ -13,10 +13,20 @@
     height: 240px;
     background-color: $dark-blue;
     box-shadow: 0 2px 2px 0 rgba(black, 0.14);
+    overflow: hidden;
     @include vertical-center();
+    transition: height 1s, bottom 0.4s;
+
+    .window-controls {
+      transition: right 1s;
+    }
 
     .welcome {
+      height: auto;
       text-align: center;
+      overflow: hidden;
+      margin-top: 0px;
+      transition: margin-top 1s;
 
       .welcome-title {
         letter-spacing: .5em;
@@ -33,6 +43,19 @@
       p {
         letter-spacing: 0.1em;
       }
+    }
+  }
+
+  .home-wrapper.product-mode {
+    height: 70px;
+    bottom: 91.2vh;
+
+    .welcome {
+      margin-top: -117px;
+    }
+
+    .window-controls {
+      right: -100%;
     }
   }
   .product-wrapper {}
