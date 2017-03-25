@@ -39,9 +39,20 @@ function(Backbone, Dragscroll, ScannerBarView, ProducView, main_t) {
 
     showAbout: function() {
       var about = $(".about");
-      console.log(about);
       about.addClass("about-show");
       about.removeClass("about-hide");
+    },
+
+    transformShowProduct: function() {
+      var mainview = this;
+      var home = mainview.$el.find(".home-wrapper");
+      home.addClass("product-mode");
+    },
+
+    restoreHome: function() {
+      var mainview = this;
+      var home = mainview.$el.find(".home-wrapper");
+      home.removeClass("product-mode");
     },
 
     render: function() {

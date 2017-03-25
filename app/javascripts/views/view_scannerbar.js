@@ -9,7 +9,8 @@ function(Backbone, scannerbar_t) {
     className: 'scannerbar-view',
 
     events: {
-      "click .close-form": "clean",
+      "click .close-form": "backToHome",
+      "submit #scannerbar-form": "routeChange"
     },
 
     initialize: function() {
@@ -22,9 +23,20 @@ function(Backbone, scannerbar_t) {
       view.$el.append(scannerbar_t);
     },
 
+    backToHome: function() {
+      App.Router.home();
+    },
+
     clean: function() {
       var view = this;
       view.$el.find('#search').val('');
+    },
+
+    routeChange: function(e) {
+      e.preventDefault();
+      var view = this;
+      var code = view.$el.find('#search').val();
+      App.Router.show_product(code);
     }
 
   })
