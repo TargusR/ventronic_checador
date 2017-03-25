@@ -1,9 +1,39 @@
+#app_container {
+  width: 100%;
+  height: 100%;
+}
+
 .main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
   .home-wrapper {
+    width: 100vw;
+    height: 240px;
+    background-color: $dark-blue;
+    box-shadow: 0 2px 2px 0 rgba(black, 0.14);
+    @include vertical-center();
+
     .welcome {
-      .welcome-title {}
+      text-align: center;
+
+      .welcome-title {
+        letter-spacing: .5em;
+      }
     }
-    #scannerbar {}
+    #scannerbar {
+      @import "views/scannerbar";
+    }
+    .desc {
+      width: 600px;
+      margin: 20px auto;
+      text-align: center;
+
+      p {
+        letter-spacing: 0.1em;
+      }
+    }
   }
   .product-wrapper {}
 }
