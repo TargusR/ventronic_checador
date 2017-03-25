@@ -110,3 +110,19 @@
   60% {margin-left: -15px;}
   100% {margin-left: -15px;}
 }
+
+// Background slide (Slide background to right bottom)
+@keyframes bgSlide {
+  0% {background-position: 0% 0%;}
+  25% {background-position: 100% 100%;}
+  50% {background-position: 0% 100%;}
+  75% {background-position: 100% 0%;}
+  100% {background-position: 0% 0%;}
+}
+@-webkit-keyframes slideLeft {
+  0% {background-position: 0% 0%;}
+  25% {background-position: 100% 100%;}
+  50% {background-position: 0% 100%;}
+  75% {background-position: 100% 0%;}
+  100% {background-position: 0% 0%;}
+}

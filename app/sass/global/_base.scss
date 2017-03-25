@@ -16,6 +16,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  //@include animate(bgSlide, 13s);
+  //@include animate-cicle(infinite, normal);
 
   /*
 
