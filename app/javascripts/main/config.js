@@ -4,7 +4,7 @@ define([
 
 function($) {
   var config = {
-    api: '',
+    api: 'http://local.test.com/chuy/',
     image_server: ''
   }
 

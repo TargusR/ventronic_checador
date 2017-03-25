@@ -9,13 +9,14 @@ define([
 
   var App = {
     initialize: function() {
-      Router.initialize();
+      App.Router = Router.initialize();
       console.log("App Initialized: Backbone v" + Backbone.VERSION);
       this.start();
     },
 
     start: function() {
       App.mainView = new MainView;
+      App.productModel = new ProductModel;
     },
 
     register: function(globalName) {
