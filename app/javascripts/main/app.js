@@ -1,17 +1,16 @@
 define([
+  'backbone',
   'router',
   'view_mainview',
-  'model_product',
-  //'hammerjs',
-  //'materialize'
+  'model_product'
   ],
   
-  function(Router, MainView, ProductModel/*, HammerJs, Materialize*/) {
+  function(Backbone, Router, MainView, ProductModel) {
 
   var App = {
     initialize: function() {
       Router.initialize();
-      console.log("hola Mundo");
+      console.log("App Initialized: Backbone v" + Backbone.VERSION);
       this.start();
     },
 

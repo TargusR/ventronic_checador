@@ -29,12 +29,34 @@ function(Backbone, Dragscroll, ScannerBarView, ProducView, main_t) {
       this.render();
     },
 
+    hideAbout: function() {
+      var about = $(".about");
+      about.addClass("about-hide");
+      setTimeout(function () {
+        about.removeClass("about-show");
+      }, 710);
+    },
+
+    showAbout: function() {
+      var about = $(".about");
+      console.log(about);
+      about.addClass("about-show");
+      about.removeClass("about-hide");
+    },
+
     render: function() {
       var mainview = this;
       mainview.$el.append(main_t);
 
       var scannerBarContainer = mainview.$el.find('#scannerbar');
       scannerBarContainer.append(mainview.scannerBarView.$el);
+
+      // Eventos sobre elementos fuera de este view y de App_container; Acción no estandar
+      var aboutShow = $('.button-info');
+      aboutShow.click(mainview.showAbout);
+
+      var aboutClose = $('.about .button-close');
+      aboutClose.click(mainview.hideAbout);
 
       //mainview.$el.find('.main').addClass(C.sponsorCode);
 
