@@ -15,14 +15,21 @@ function(Backbone) {
     },
 
     home: function() {
-      App.mainView.restoreHome();
-      App.mainView.scannerBarView.clean();
+      App.mainView.productView.hide();
+      setTimeout(function () {
+        App.mainView.restoreHome();
+        App.mainView.scannerBarView.clean();
+      }, 400);
     },
 
     show_product: function(code) {
       var onSucess = function() {
         //console.log("Si se Pudo");
+        App.mainView.productView.render();
         App.mainView.transformShowProduct();
+        setTimeout(function () {
+          App.mainView.productView.show();
+        }, 400);
       }
 
       var onError = function() {

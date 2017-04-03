@@ -10,7 +10,8 @@ function(Backbone, scannerbar_t) {
 
     events: {
       "click .close-form": "backToHome",
-      "submit #scannerbar-form": "routeChange"
+      "submit #scannerbar-form": "routeChange",
+      "keyup #search": "checkInput"
     },
 
     initialize: function() {
@@ -37,6 +38,13 @@ function(Backbone, scannerbar_t) {
       var view = this;
       var code = view.$el.find('#search').val();
       App.Router.show_product(code);
+    },
+
+    checkInput: function(e) {
+      var view = this;
+      content = view.$el.find('#search').val();
+
+      console.log("Your input is: " + content);
     }
 
   })

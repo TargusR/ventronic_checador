@@ -15,8 +15,8 @@ define([
     },
 
     start: function() {
-      App.mainView = new MainView;
       App.productModel = new ProductModel;
+      App.mainView = new MainView;
     },
 
     register: function(globalName) {

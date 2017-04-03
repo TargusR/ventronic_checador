@@ -4,7 +4,7 @@ define([
   'underi18n'
 ], 
 
-function(Backbone, Underscore, Underi18n) {
+function(Backbone, _, Underi18n) {
   var templates = {}
 
   // Asynchronous template loading, with a callback
@@ -28,24 +28,19 @@ function(Backbone, Underscore, Underi18n) {
     }
   }
 
-  // Template loading done by calling view, synchronous
+  // Template loading done by calling view, synchronous :: MODIFIED, removed multilanguage selection ::
   var $$2 = function(template, data) {
-    var lang = t.getLanguage()
     var templatesList = templates
 
-    if(typeof(templatesList[lang]) == 'undefined') {
-      templatesList[lang] = {}
-    }
-
-    if(typeof(templatesList[lang][template.name]) == 'undefined') {
+    if(typeof(templatesList[template.name]) == 'undefined') {
       _.templateSettings.interpolate  = /\{\{(.*?)\}\}/g
       //_.templateSettings.evaluate     = /\{\{%([\s\S]+?)\}\}/g
       _.templateSettings.escape       = /\{\{-([\s\S]+?)\}\}/g
 
-      templatesList[lang][template.name] = _.template(underi18n.template(template.content, t))
+      templatesList[template.name] = _.template(Underi18n.template(template.content))
     }
     
-    return templatesList[lang][template.name](data)
+    return templatesList[template.name](data)
   }
 
   var $$ = $$2
