@@ -1,0 +1,25 @@
+.product-view {
+  .product-container {
+    width: 90vw;
+    margin: auto;
+    color: $dark-blue;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100vh;
+    transition: top 0.75s;
+    
+    .product-info {}
+    .product-details {}
+
+    .product-error-message {}
+  }
+
+  .product-container-hide {
+    top: 100vh;
+  }
+
+  .product-container-show {
+    top: 14vh;
+  }
+}

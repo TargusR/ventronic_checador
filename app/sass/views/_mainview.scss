@@ -26,7 +26,8 @@
       text-align: center;
       overflow: hidden;
       margin-top: 0px;
-      transition: margin-top 1s;
+      opacity: 1;
+      transition: margin-top 1s, opacity 1s;
 
       .welcome-title {
         letter-spacing: .5em;
@@ -52,11 +53,14 @@
 
     .welcome {
       margin-top: -117px;
+      opacity: 0;
     }
 
     .window-controls {
       right: -100%;
     }
   }
-  .product-wrapper {}
+  #product {
+    @import "views/product";
+  }
 }

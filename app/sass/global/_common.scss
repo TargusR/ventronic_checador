@@ -8,3 +8,14 @@
 .button {
   cursor: pointer;
 }
+
+.column {
+  display: inline-block;
+  width: 50%;
+}
+.left-column {
+  float: left;
+}
+.right-column {
+  float: right;
+}
