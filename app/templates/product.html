@@ -1,0 +1,30 @@
+<div class="card-panel product-container">
+  <% if(!product_error) { %>
+  <div class="left-column column product-info">
+    <div class="product-info-wrapper">
+      <div class="product-title">
+        <h3>{{ product_name }}</h3>
+      </div>
+      <div class="product-numbers">
+        <div class="product-preciom">
+          <span>{{ product_preciom }}</span>
+        </div>
+        <div class="product-preciop">
+          <span>{{ product_preciop }}</span>
+        </div>
+        <div class="product-stock">
+          <span>{{ product_stock }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-column column product-details">
+    {{ product_img }}
+  </div>
+  <% } else { %>
+  <div class="product-error-message">
+    <i class="fa fa-warning fa-3x"></i>
+    <span>{{ product_error_message }}</span>
+  </div>
+  <% } %>
+</div>
