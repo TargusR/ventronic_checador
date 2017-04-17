@@ -1,16 +1,35 @@
 .product-view {
   .product-container {
     width: 90vw;
+    height: auto;
+    max-height: 80vh;
     margin: auto;
+    padding: 0;
     color: $dark-blue;
     position: absolute;
     left: 0;
     right: 0;
     top: 100vh;
     transition: top 0.75s;
-    
-    .product-info {}
-    .product-details {}
+
+    .product-info {
+      width: 40%;
+    }
+    .product-details {
+      width: 60%;
+      height: 80vh;
+      overflow: scroll;
+
+      .picture {
+        width: 100%;
+        height: auto;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
 
     .product-error-message {}
   }
