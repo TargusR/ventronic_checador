@@ -13,10 +13,10 @@ requirejs.config({
 requirejs([
   'config',
   'app', 
-  'templated'
+  'templated',
 ], 
 
-function(Config, App, Templated) {
+function(Config, App, Templated, FileS) {
   Templated.init('$$');    // Register the templating function globally
   Config.register('C');    // Register the configuration object globally
 

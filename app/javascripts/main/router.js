@@ -33,7 +33,7 @@ function(Backbone) {
       }
 
       var onError = function() {
-        console.log("No se pudo");
+        //console.log("No se pudo");
       }
 
       console.log("Showing Product: " + code);
