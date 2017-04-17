@@ -16,10 +16,16 @@ bozon = require('bozon/lib/bozon');
 
 // Custom Parsers
 bozon.hooks.push(
+  'configs',
   'templates',
   'scripts:views',
   'scripts:models'
   );
+
+// Config Files
+bozon.task('configs', function () {
+  return bozon.src('./*.info').pipe(bozon.dest('./'))
+});
 
 // template html parsing 
 bozon.task('templates', function () {
