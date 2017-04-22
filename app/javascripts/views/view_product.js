@@ -38,11 +38,11 @@ function(Backbone, product_t) {
       var data = {
         product_error: view.dataError,
         product_error_message: view.dataErrorMsg,
-        product_name: typeof product.nombre === 'undefined' ? "No se ha proporcionado un nombre" : product.name,
+        product_name: typeof product.nombre === 'undefined' ? "No se ha proporcionado un nombre" : product.nombre,
         product_preciom: typeof product.preciom === 'undefined' ? "No se ha proporcionado un precio mayoreo" : product.preciom,
         product_preciop:  typeof product.preciop === 'undefined' ? "No se ha proporcionado un precio publico" : product.preciop,
         product_stock:  typeof product.stock === 'undefined' ? "No se ha proporcionado una cantidad" : product.stock,
-        product_img:  typeof product.url === 'undefined' ? "images/no_description.png" : product.url
+        product_img:  typeof product.url === 'undefined' ? "images/no_description.png" : C.image_server + product.url
       }
 
       view.$el.empty().append(

@@ -43,8 +43,17 @@ function(Backbone, scannerbar_t) {
     checkInput: function(e) {
       var view = this;
       content = view.$el.find('#search').val();
+      content = view.justNumbers(content);
+      view.$el.find('#search').val(content);
+      //console.log("Your input is: " + content);
+    },
 
-      console.log("Your input is: " + content);
+    justNumbers: function(content) {
+      // all letters upper and lower
+      content = content.replace(/[A-Za-z-ñÑ]/g,"");
+      // special
+      content = content.replace(/[¡!¿?{}´,.:-]/g,"");
+      return content;
     }
 
   })

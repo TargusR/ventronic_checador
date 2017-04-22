@@ -7,7 +7,7 @@ define([
 
       fetchProduct: function(barcode, callbackOn, callbackOff) {
         var model = this;
-        model.url = C.api + '?pr=' + barcode;
+        model.url = C.api + '?codigo=' + barcode;
         model.data_type = 'Producto';
         var ProductoSuccess = function(model, response, options) {
           callbackOn();
