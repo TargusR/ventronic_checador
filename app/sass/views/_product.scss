@@ -14,6 +14,39 @@
 
     .product-info {
       width: 40%;
+
+      .product-info-wrapper {
+        padding: 20px;
+
+        .product-tittle h3 {
+          font-size: 1.4em;
+        }
+        .product-numbers {
+          margin-top: 100px;
+          padding: 20px;
+
+          .product-number .label {
+            color: $dark-blue;
+          }
+
+          .product-number .data {
+            color: $blue;
+          }
+
+          .product-precio {
+            font-size: 1.4em; 
+            line-height: 2em;
+
+            .data {
+              color: $red;
+            }
+          }
+
+          .product-preciom {
+            font-size: 1.6em;
+          }
+        }
+      }
     }
     .product-details {
       width: 60%;
