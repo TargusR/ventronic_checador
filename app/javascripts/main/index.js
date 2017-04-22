@@ -19,7 +19,7 @@ electron.app.on('ready', function() {
   });
 
   // Open Dev Tools
-  window.webContents.openDevTools();
+  //window.webContents.openDevTools();
 
   window.loadURL('file://' + path.join(__dirname, '..', '..') + '/index.html');
 
