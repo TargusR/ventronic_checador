@@ -6,14 +6,17 @@
         <h3>{{ product_name }}</h3>
       </div>
       <div class="product-numbers">
-        <div class="product-preciom">
-          <span>{{ product_preciom }}</span>
+        <div class="product-number product-precio product-preciop">
+          <span class="label">Precio Menudeo: </span>
+          <span class="data">{{ '$' + product_preciop }}</span>
         </div>
-        <div class="product-preciop">
-          <span>{{ product_preciop }}</span>
+        <div class="product-number product-precio product-preciom">
+          <span class="label">Precio Mayoreo: </span>
+          <span class="data">{{ '$' + product_preciom }}</span>
         </div>
-        <div class="product-stock">
-          <span>{{ product_stock }}</span>
+        <div class="product-number product-stock">
+          <span class="label">Cantidad Disponible: </span>
+          <span class="data">{{ product_stock }}</span>
         </div>
       </div>
     </div>
